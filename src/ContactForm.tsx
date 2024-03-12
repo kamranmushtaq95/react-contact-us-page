@@ -20,7 +20,7 @@ const ContactForm: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(formData);
+        console.log(formData); // you can see the console to see the form data when we connect to the backend it will help us to send data to database.
     };
 
     return (
@@ -33,15 +33,15 @@ const ContactForm: React.FC = () => {
                     <form className='main-form' onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="fullName">Full Name</label>
-                            <input type="text" name="fullName" id="fullName" className="form-control" placeholder="Input your full name in here" value={formData.fullName} onChange={handleChange} />
+                            <input type="text" name="fullName" id="fullName" className="form-control" placeholder="Input your full name in here" value={formData.fullName} onChange={handleChange} required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="email" name="email" id="email" className="form-control" placeholder="Input your Email in here" value={formData.email} onChange={handleChange} />
+                            <input type="email" name="email" id="email" className="form-control" placeholder="Input your Email in here" value={formData.email} onChange={handleChange} required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="subject">Subject</label>
-                            <input type="text" name="subject" id="subject" className="form-control" placeholder="Questions" value={formData.subject} onChange={handleChange} />
+                            <input type="text" name="subject" id="subject" className="form-control" placeholder="Questions" value={formData.subject} onChange={handleChange} required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="message">Message</label>
